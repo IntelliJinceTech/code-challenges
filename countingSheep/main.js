@@ -31,3 +31,7 @@ function countSheepsBool(arrayOfSheeps){
     console.log(arrSheep);
 
 }
+
+function countSheepBoolCorrect(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+}
