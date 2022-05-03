@@ -30,3 +30,24 @@ function past(h, m, s){
     return (s*1000) + (m*1000*60) + (h*60*60*1000)
 }
 
+function lovefunc(flower1, flower2){
+    return ((flower1 % 2 == 0 && flower2 % 2 ==1) || (flower2 % 2 == 0 && flower1 % 2 ==1) ) ? true : false;
+}
+
+function check(arr, x) {
+    return arr.includes(x)
+}
+
+function find_average(array) {
+    if(array.length ===0) {
+        return 0
+    } else {
+        return array.reduce((acc,curr)=> acc + curr,0)/array.length
+
+    }
+    
+}
+
+function fakeBin(str){
+    return str.split('').map((digit => Number(digit) < 5 ? '0': '1')).join('')
+}
