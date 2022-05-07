@@ -51,3 +51,12 @@ function find_average(array) {
 function fakeBin(str){
     return str.split('').map((digit => Number(digit) < 5 ? '0': '1')).join('')
 }
+
+
+const reverseSeq = n => {
+    let arr = []
+    for(let i = n; i >0; i--) {
+        arr.push(i)
+    }
+    return arr
+  };
