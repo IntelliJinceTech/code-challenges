@@ -1,4 +1,3 @@
-
 // function digitize(n) {
 //     return String(n).split('').reverse().map(Number)
 // }
@@ -10,28 +9,28 @@ function findNeedle(haystack) {
 }
 
 
-function maps(x){
-    return x.map(num => num*2)
+function maps(x) {
+    return x.map(num => num * 2)
 }
 
-const stringToNumber = function(str){
+const stringToNumber = function (str) {
     return Number(str);
 }
 
-function greet(name){
+function greet(name) {
     return `Hello, ${name} how are you doing today?`
 }
 
-function past(h, m, s){
+function past(h, m, s) {
     //milliseconds = 
     //second*1000 +
     //minute * 60 * 1000
     // hours * 60 * 60 * 1000
-    return (s*1000) + (m*1000*60) + (h*60*60*1000)
+    return (s * 1000) + (m * 1000 * 60) + (h * 60 * 60 * 1000)
 }
 
-function lovefunc(flower1, flower2){
-    return ((flower1 % 2 == 0 && flower2 % 2 ==1) || (flower2 % 2 == 0 && flower1 % 2 ==1) ) ? true : false;
+function lovefunc(flower1, flower2) {
+    return ((flower1 % 2 == 0 && flower2 % 2 == 1) || (flower2 % 2 == 0 && flower1 % 2 == 1)) ? true : false;
 }
 
 function check(arr, x) {
@@ -39,24 +38,37 @@ function check(arr, x) {
 }
 
 function find_average(array) {
-    if(array.length ===0) {
+    if (array.length === 0) {
         return 0
     } else {
-        return array.reduce((acc,curr)=> acc + curr,0)/array.length
+        return array.reduce((acc, curr) => acc + curr, 0) / array.length
 
     }
-    
+
 }
 
-function fakeBin(str){
-    return str.split('').map((digit => Number(digit) < 5 ? '0': '1')).join('')
+function fakeBin(str) {
+    return str.split('').map((digit => Number(digit) < 5 ? '0' : '1')).join('')
 }
 
 
 const reverseSeq = n => {
     let arr = []
-    for(let i = n; i >0; i--) {
+    for (let i = n; i > 0; i--) {
         arr.push(i)
     }
     return arr
-  };
+};
+
+function paperwork(n, m) {
+    return m < 0 || n < 0 ? 0 : m * n
+}
+
+function booleanToString(b) {
+    return String(b);
+}
+
+function getAverage(marks) {
+    return Math.floor((marks.reduce((prev, curr) => prev + curr, 0)) / marks.length)
+
+}
