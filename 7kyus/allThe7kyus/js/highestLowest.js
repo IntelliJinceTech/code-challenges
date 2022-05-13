@@ -9,15 +9,20 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
 
-function highAndLow(numbers) {
-    // split into array of numbers without spaces
-    // sort the array from highest to lowest
-    // slice? or shift/pop? or 0 and length-1
-    // 
+// function highAndLow(numbers) {
+//     // split into array of numbers without spaces
+//     // sort the array from highest to lowest
+//     // slice? or shift/pop? or 0 and length-1
+//     // 
 
-    let numArr = numbers.split(' ').sort((a, b) => b - a)
-    return `${numArr[0]} ${numArr[numArr.length-1]}`
-    // return numArr
+//     let numArr = numbers.split(' ').sort((a, b) => b - a)
+//     return `${numArr[0]} ${numArr[numArr.length-1]}`
+//     // return numArr
+// }
+
+function highAndLow(numbers) {
+    numbersArr = numbers.split(' ');
+    return `${Math.max(...numbersArr)} ${Math.min(...numbersArr)}`;
 }
 
 console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'))
