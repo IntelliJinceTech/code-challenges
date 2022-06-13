@@ -24,3 +24,12 @@
 //? if length of the word is odd --> return char at midpoint (Math.floor?)
 //? else if even --> return chars at midpoint (math.floor and math.ceil)
 //? 
+
+function getMiddle(str) {
+    return str.length % 2 === 1 ? str[Math.floor(str.length / 2)] : (str[Math.floor(str.length / 2) - 1]) + (str[Math.floor(str.length / 2)])
+}
+
+// console.log(getMiddle('test'))
+// console.log(getMiddle('testing'))
+// console.log(getMiddle('middle'))
+console.log(getMiddle('A'))
