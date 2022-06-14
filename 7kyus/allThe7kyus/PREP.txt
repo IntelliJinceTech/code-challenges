@@ -1,0 +1,4 @@
+P - Parameters
+R - Return 
+E - Examples
+P - Pseudocode
