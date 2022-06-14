@@ -18,6 +18,32 @@
 //? if negative or sqrt of argument is a decimal - return false
 //? otherwise if squrt of argument is not a decimal - return true
 
-let isSquare = function (number) {
-    return false; // fix me
+//! first try
+// let isSquare = function (num) {
+//     if (num < 0) {
+//         return false
+//     } else if ((Math.sqrt(num) % 1 !== 0)) {
+//         return false
+//     } else {
+//         return true
+//     }
+// }
+
+//! refactor x1
+
+// let isSquare = (num) => {
+//     if (num < 0 || (Math.sqrt(num) % 1 !== 0)) {
+//         return false
+//     } else {
+//         return true
+//     }
+// }
+
+//! best solution
+let isSquare = (num) => {
+    return Math.sqrt(num) % 1 === 0
 }
+
+console.log(isSquare(-1))
+console.log(isSquare(0))
+console.log(isSquare(4))
