@@ -13,3 +13,18 @@
 // ? if argument >2, loop through starting at 3, each iteration adding 4 to catYears, 5 to dogYears
 // ? return [argument, catYears,dogYears]
 // ?
+
+let humanYearsCatYearsDogYears = function (humanYears) {
+    let catYears = 15;
+    let dogYears = 15;
+    if (humanYears === 2) {
+        return [humanYears, catYears + 9, dogYears + 9];
+    } else if (humanYears > 2) {
+        return [
+            humanYears,
+            catYears + 9 + 4 * (humanYears - 2),
+            dogYears + 9 + 5 * (humanYears - 2),
+        ];
+    }
+    return [humanYears, catYears, dogYears];
+};
