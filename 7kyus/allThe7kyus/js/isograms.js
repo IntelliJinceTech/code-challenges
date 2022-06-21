@@ -18,17 +18,22 @@
 //! else
 //!     return false
 
-function isIsogram(str) {
-    // let newArr = str.toLowerCase().split("");
+// function isIsogram(str) {
+//     let stringCheck = str
+//         .toLowerCase()
+//         .split("")
+//         .filter((ele, index, arr) => {
+//             return arr.indexOf(ele) == index;
+//         });
+//     return str.length === stringCheck.length ? true : false;
+// }
 
-    let stringCheck = str
-        .toLowerCase()
-        .split("")
-        .filter((ele, index, arr) => {
-            return arr.indexOf(ele) == index;
-        });
-    return str.length === stringCheck.length ? true : false;
+// set
+function isIsogram(str) {
+    return new Set(str.toUpperCase()).size == str.length;
 }
+
+//! Set is a different type of object. Only holds unique values
 
 // console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
