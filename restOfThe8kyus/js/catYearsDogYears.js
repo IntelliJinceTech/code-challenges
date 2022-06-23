@@ -14,17 +14,33 @@
 // ? return [argument, catYears,dogYears]
 // ?
 
-let humanYearsCatYearsDogYears = function (humanYears) {
-    let catYears = 15;
-    let dogYears = 15;
-    if (humanYears === 2) {
-        return [humanYears, catYears + 9, dogYears + 9];
-    } else if (humanYears > 2) {
+//! First try
+// let humanYearsCatYearsDogYears = function (humanYears) {
+//     let catYears = 15;
+//     let dogYears = 15;
+//     if (humanYears === 2) {
+//         return [humanYears, catYears + 9, dogYears + 9];
+//     } else if (humanYears > 2) {
+//         return [
+//             humanYears,
+//             catYears + 9 + 4 * (humanYears - 2),
+//             dogYears + 9 + 5 * (humanYears - 2),
+//         ];
+//     }
+//     return [humanYears, catYears, dogYears];
+// };
+
+//! Second Try before submitting
+function humanYearsCatYearsDogYears(humanYears) {
+    if (humanYears == 1) {
+        return [humanYears, humanYears * 15, humanYears * 15];
+    } else if (humanYears == 2) {
+        return [humanYears, (humanYears - 1) * 24, (humanYears - 1) * 24];
+    } else {
         return [
             humanYears,
-            catYears + 9 + 4 * (humanYears - 2),
-            dogYears + 9 + 5 * (humanYears - 2),
+            (humanYears - 1) * 24 + (humanYears - 2) * 4,
+            (humanYears - 1) * 24 + (humanYears - 2) * 4,
         ];
     }
-    return [humanYears, catYears, dogYears];
-};
+}
