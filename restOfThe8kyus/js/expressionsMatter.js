@@ -13,3 +13,16 @@
 // ? create an empty array
 // ? try different combinations with *, + , () and push each solution to the created empty array.
 // ? return the Math.max
+
+function expressionMatter(a, b, c) {
+    return Math.max(
+        a + b + c,
+        a + (b + c),
+        a * b + c,
+        a * (b + c),
+        (a + b) * c,
+        a + b * c,
+        a * b * c,
+        a * (b * c)
+    );
+}
