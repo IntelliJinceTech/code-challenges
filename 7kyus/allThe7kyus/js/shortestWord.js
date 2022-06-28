@@ -5,3 +5,9 @@
 // ! split string into an array
 // ! Find the length of each element/word
 // ! Return the max of said array
+
+function findShort(str) {
+    return Math.min(...str.split(" ").map((word) => word.length));
+}
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
