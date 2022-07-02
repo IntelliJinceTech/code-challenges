@@ -10,15 +10,20 @@
 // ? Return the array
 
 function DNAStrand(dna) {
-    return dna.split("").map((ele) => {
-        if (ele === "A") {
-            return "T";
-        } else if (ele === "T") {
-            return "A";
-        } else if (ele === "G") {
-            return "C";
-        } else {
-            return "G";
-        }
-    });
+    return dna
+        .split("")
+        .map((ele) => {
+            if (ele === "A") {
+                return "T";
+            } else if (ele === "T") {
+                return "A";
+            } else if (ele === "G") {
+                return "C";
+            } else {
+                return "G";
+            }
+        })
+        .join("");
 }
+
+console.log(DNAStrand("ATTGC"));
