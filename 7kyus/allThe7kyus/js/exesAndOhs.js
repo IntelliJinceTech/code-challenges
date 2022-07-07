@@ -15,6 +15,7 @@
 // make string all lower case
 // split the string into an array and for Each of the elements within array, if matching x or o, increase counter for corresponding letter
 // return true if x's and o's equal otherwise false
+
 function XO(str) {
     let xCounter = 0;
     let oCounter = 0;
@@ -28,9 +29,8 @@ function XO(str) {
     return xCounter === oCounter
 }
 
-
-console.log(XO("ooxx")) // => true
+// console.log(XO("ooxx")) // => true
 // console.log(XO("xooxx")) // => false
 // console.log(XO("ooxXm")) // => true
 // console.log(XO("zpzpzpp")) // => true // when no 'x' and 'o' is present should return true
-// console.log(XO("zzoo")) // => false
+console.log(XO("zzoo")) // => false
