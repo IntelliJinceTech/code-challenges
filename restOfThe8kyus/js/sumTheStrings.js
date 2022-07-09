@@ -4,5 +4,9 @@ function sumStr(a, b) {
     //? sum them
     //? convert to string
     //? return result
-    return [a, b];
+    // return String([a, b].reduce((acc, curr) => Number(acc) + Number(curr)));
+
+    return String(Number(a) + Number(b));
 }
+
+console.log(sumStr("4", "5"));
