@@ -9,5 +9,18 @@
 //! return the new first string
 
 function twoSort(arrOfStr) {
-    return arrOfStr.sort();
+    arrOfStr.sort();
+    return arrOfStr[0].split("").join("***");
 }
+
+console.log([
+    "bitcoin",
+    "take",
+    "over",
+    "the",
+    "world",
+    "maybe",
+    "who",
+    "knows",
+    "perhaps",
+]);
