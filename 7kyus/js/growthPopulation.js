@@ -6,14 +6,25 @@
 //?     percent growth --> floating, integer, positive or null, floating number
 //?     inhabitants coming and going --> integer, positive or negative
 //?     target population --> greater than or equal to p
+
+// initialize array with p0 at index 0
+// do calculation and push to initialized array
+// check when population exceeds or equals target population
+// return index of the array
 function nbYear(p0, percent, aug, p) {
-	// initialize array with p0 at index 0
-	// do calculation and push to initialized array
-	// check when population exceeds or equals target population
-	// return index of the array
+	let year = 0
+	let nextPop = p0
+	while (nextPop < p) {
+		nextPop = Math.floor(nextPop + nextPop * (percent * 0.01) + aug)
+		year++
+	}
+	return year
 }
 
-console.log(nbYear(1500, 5, 100, 5000), 15)
+// console.log(calculatePop(1000, 0.02, 50))
+
+console.log(nbYear(1000, 2, 50, 1200), `correct answer is 3`)
+console.log(nbYear(1500, 5, 100, 5000), `correct answer is 15`)
 console.log(nbYear(1500000, 2.5, 10000, 2000000), 10)
 console.log(nbYear(1500000, 0.25, 1000, 2000000), 94)
 
