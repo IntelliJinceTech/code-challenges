@@ -3,6 +3,8 @@
 
 function findNextSquare(sq) {
 	// Sqrt the sq
+	let num = Math.sqrt(sq)
+	return num % 1 === 0 ? (num + 1) ** 2 : -1
 	// check if integer
 	// if not integer --> return -1
 	// if integer --> return integer + 1 **2
