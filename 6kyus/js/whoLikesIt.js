@@ -3,6 +3,17 @@
 // takes in an array of strings --> any weirdness in the array input?
 // outputs different string combinations dependent on length of array input
 
+// length = 0 --> no one likes this
+// length < 4 --> ...array likes this
+// length >=4 --> array[0], array[1] and (rest of the array).length likes this
+
+//?pseudocode
+//
+//
+//
+//
+//
+
 function likes(names) {
 	return
 }
