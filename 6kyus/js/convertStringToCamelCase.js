@@ -7,7 +7,8 @@ function toCamelCase(str) {
 	// Determine if string includes - or underscore
 	// Split on dash or underscore
 	// loop over each element in array and capitalize first character starting from index 1
-	//
+	// join
+	// return string
 }
 
 console.log(toCamelCase('the-stealth-warrior'), 'theStealthWarrior')
