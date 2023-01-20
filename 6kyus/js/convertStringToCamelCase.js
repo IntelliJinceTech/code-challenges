@@ -5,6 +5,16 @@
 
 function toCamelCase(str) {
 	// Determine if string includes - or underscore
+	let returnString = ''
+	if (str.includes('-')) {
+		returnString = str.split('-').map((word, idx) => {
+			if (idx > 0) {
+				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+			}
+			return word
+		})
+		return returnString.join('')
+	}
 	// Split on dash or underscore
 	// loop over each element in array and capitalize first character starting from index 1
 	// join
@@ -12,4 +22,4 @@ function toCamelCase(str) {
 }
 
 console.log(toCamelCase('the-stealth-warrior'), 'theStealthWarrior')
-console.log(toCamelCase('The-Templar-warrior'), 'TheTemplarWarrior')
+console.log(toCamelCase('The_Templar_warrior'), 'TheTemplarWarrior')
