@@ -23,3 +23,4 @@ function toCamelCase(str) {
 
 console.log(toCamelCase('the-stealth-warrior'), 'theStealthWarrior')
 console.log(toCamelCase('The_Templar_warrior'), 'TheTemplarWarrior')
+console.log(toCamelCase('The-Templar-warrior'), 'TheTemplarWarrior')
