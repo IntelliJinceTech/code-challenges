@@ -11,6 +11,13 @@
 //      false condition:
 //?         Basically everything not above
 
+// TODO true if
+// TODO     length of array = 10
+// TODO     number of opposing directions should equal each other (5n, 5s OR 5w, 5e)
+// TODO         use of object to count each occurrence
+// TODO         create key value pairing object for directions?
+// TODO otherwise false
+
 function isValidWalk(walk) {
 	//
 }
