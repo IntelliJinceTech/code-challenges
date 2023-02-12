@@ -6,11 +6,19 @@
 // output
 //      one array or empty array if applicable
 
+//? Ideal case: a.length and b.length >= 1
+//! Edge cases:
+//!     a.length ===0 --> returns []
+//!     b.length ===0 --> returns a
+//!     no elements of b in array a
+
+// TODO LOOP over array input a
+// TODO     LOOP over array input b
+// TODO         If array input a matches with b, remove element and index
+// TODO         Otherwise, move on
 // TODO
 // TODO
-// TODO
-// TODO
-// TODO
+// TODO RETURN array a
 
 function arrayDiff(a, b) {
 	//
