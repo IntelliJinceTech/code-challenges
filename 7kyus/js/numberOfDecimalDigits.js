@@ -3,7 +3,9 @@
 // returns - number of digits - Number
 
 function digits (n) {
-  //TODO  
+  //TODO  with parameter n, given that it is a valid number
+  //TODO  convert to string
+  //TODO  find length of string and return
 }
 
 console.log(digits(5)) // 1
