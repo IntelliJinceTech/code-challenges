@@ -6,6 +6,15 @@
 // TODO remove numbers
 // TODO return string
 function stringClean(s) {
+  let newStr = "";
+  for(let i = 0; i<s.length; i++) {
+    if(s[i] === ' ') {
+      newStr+= ' '
+    } else if(isNaN(s[i])) {
+      newStr+= s[i];
+    }
+  }
+  return newStr;
 }
 
 console.log(stringClean("A1 A1! AAA   3J4K5L@!!!"))//, "A A! AAA   JKL@!!!"))
