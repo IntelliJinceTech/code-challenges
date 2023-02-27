@@ -12,12 +12,31 @@
 //TODO  return array of first string and second string in separate indexes
 
 function capitalize(s){
-  return [];
+  let evenStr = ""
+  let oddStr = ""
+  for(let i = 0 ; i< s.length ; i++) {
+    if(i === 0 || i % 2 ===0) {
+      evenStr+= s[i].toUpperCase()
+      oddStr += s[i]
+    } else {
+      evenStr += s[i]
+      oddStr += s[i].toUpperCase()
+    }
+  }
+  return [evenStr,oddStr]
 };
 
 // examples
 
-// console.log(capitalize("abcdef"))//,['AbCdEf', 'aBcDeF']);
-// console.log(capitalize("codewars"))//,['CoDeWaRs', 'cOdEwArS']);
-// console.log(capitalize("abracadabra"))//,['AbRaCaDaBrA', 'aBrAcAdAbRa']);
-// console.log(capitalize("codewarriors"))//,['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
+console.log(capitalize("abcdef"))//,['AbCdEf', 'aBcDeF']);
+console.log(capitalize("codewars"))//,['CoDeWaRs', 'cOdEwArS']);
+console.log(capitalize("abracadabra"))//,['AbRaCaDaBrA', 'aBrAcAdAbRa']);
+console.log(capitalize("codewarriors"))//,['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
+
+
+// codewars voted
+function capitalizeCW(s){
+  const odd = s.split("").map((l, i) => i % 2 !== 0 ? l.toUpperCase() : l).join("");
+  const even = s.split("").map((l, i) => i % 2 === 0 ? l.toUpperCase() : l).join("");
+  return [even, odd];
+};
