@@ -10,12 +10,17 @@
 //  TODO  if code entered != correct code or current date is after expiration date --> invalid
 //  TODO
 
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
-  currentDate = new Date(currentDate).getTime();
-  expirationDate = new Date(expirationDate).getTime()
-  return (enteredCode === correctCode) && (currentDate <=expirationDate)
-}
+//correct!
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//   currentDate = new Date(currentDate).getTime();
+//   expirationDate = new Date(expirationDate).getTime();
+//   return (enteredCode === correctCode) && (currentDate <=expirationDate)
+// }
 
 
 console.log(checkCoupon("123", "123", "July 9, 2015", "July 9, 2015"))  //===  true
 console.log(checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")) // ===  false
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+}
