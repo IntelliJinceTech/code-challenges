@@ -3,12 +3,15 @@
 // returns an array of the indexes of all capital letters
 // examples
 
+//todo  create a function that checks to compare whether character is capital or not
+//todo  initialize an empty array 
+//todo  split string into an array
+//todo  iterate over array
+//todo    use capitalCheck function
+//todo    if true --> add index of character to the initalized array
+//todo  return array
+
 function capitals(word) {
-  //todo  
-  //todo  
-  //todo  
-  //todo  
-  //todo  
 }
 
 // Examples:
