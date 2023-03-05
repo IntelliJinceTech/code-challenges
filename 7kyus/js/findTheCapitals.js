@@ -11,7 +11,18 @@
 //todo    if true --> add index of character to the initalized array
 //todo  return array
 
+function isCapital(character) {
+  return character === character.toUpperCase();
+}
+
 function capitals(word) {
+  const capitalArr= []
+  word.split('').forEach((ele,ind) => {
+    if(isCapital(ele)){
+      capitalArr.push(ind)
+    }
+  })
+  return capitalArr
 }
 
 // Examples:
