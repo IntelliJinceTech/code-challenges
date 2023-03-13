@@ -13,6 +13,12 @@
 //?
 
 function remove(string) {
-    //coding and coding....
-    return "";
+    if (string[string.length - 1] == "!") {
+        return string.slice(0, string.length - 1);
+    }
+    return string;
 }
+
+console.log(remove("Hi!!!"));
+console.log(remove("!!Hi"));
+console.log(remove("Hi!"));
