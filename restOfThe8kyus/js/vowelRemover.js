@@ -16,5 +16,5 @@ function shortcut(string) {
     return arrString.join("");
 }
 
-console.log(shortcut("hello"));
-console.log(shortcut("codewars"));
+// console.log(shortcut("hello"));
+// console.log(shortcut("codewars"));
