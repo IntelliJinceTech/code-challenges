@@ -7,3 +7,5 @@ R for Returns, what type of value is being returned with the function. What's th
 E for Examples. Edge cases to be aware of? Happy path for value? 
 
 P for Pseudocode - plain english to solve problem
+
+Make sure to sometimes whiteboard or write in a notebook
