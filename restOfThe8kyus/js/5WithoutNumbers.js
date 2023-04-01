@@ -12,5 +12,5 @@
 //*
 
 function unusualFive() {
-    return parseInt("5");
+    return "five.".length;
 }
