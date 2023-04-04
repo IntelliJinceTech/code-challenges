@@ -6,11 +6,20 @@
 // findMultiples(5,25) --> [5, 10, 15, 20, 25]
 
 //? pseudocode
-//? create an array starting with integer1 at index 0
+//? create an empty array
 //? create a loop that initalizes with your integer1
 //? each loop should add integer1 to itself and if integer1<=integer2, continue looping
 //? if cumulative integer is > integer2, break;
 
 function findMultiples(integer, limit) {
-    //your code here
+    const resultArr = [];
+    for (let i = integer; i <= limit; i += integer) {
+        // console.log(i);
+        resultArr.push(i);
+    }
+    return resultArr;
 }
+
+console.log(findMultiples(5, 25));
+
+console.log(findMultiples(4, 27));
