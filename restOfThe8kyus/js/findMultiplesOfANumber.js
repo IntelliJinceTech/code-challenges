@@ -14,7 +14,6 @@
 function findMultiples(integer, limit) {
     const resultArr = [];
     for (let i = integer; i <= limit; i += integer) {
-        // console.log(i);
         resultArr.push(i);
     }
     return resultArr;
