@@ -7,6 +7,7 @@ function mouthSize(animal) {
     //todo given argument string
     //todo check if alligator - if alligator return 'small'
     //todo otherwise return 'wide'
+    return animal.toLowerCase() == "alligator" ? "small" : "wide";
 }
 
 console.log(mouthSize("toucan"));
