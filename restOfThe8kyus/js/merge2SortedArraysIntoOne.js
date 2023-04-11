@@ -5,9 +5,12 @@
 
 function mergeArrays(arr1, arr2) {
     //todo concat arrays
-    //todo add to new Set
-    //todo convert set to array
-    //todo return array
+    let newArr = arr1.concat(arr2);
+    let newSet = new Set();
+    newArr.forEach((element) => {
+        newSet.add(element);
+    });
+    return Array.from(newSet).sort((a, b) => a - b);
 }
 
 console.log(mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]));
