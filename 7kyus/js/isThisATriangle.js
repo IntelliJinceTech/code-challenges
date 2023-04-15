@@ -9,6 +9,7 @@
 //?     b+c>a
 function isTriangle(a, b, c) {
     //todo
+    return a + b > c && a + c > b && b + c > a;
 }
 
 console.log(isTriangle(1, 2, 2)); //true
