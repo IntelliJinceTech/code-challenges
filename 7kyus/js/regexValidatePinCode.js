@@ -1,12 +1,10 @@
 // pass in string or number - could be of any length and could be a number or string
 // returns boolean true or false
 
+// todo convert to Number (try to at least)
+// todo check type so that it is a valid integer that is non-negative and non-float
+// todo check length of Number
 function validatePIN(pin) {
-    // todo convert to Number (try to at least)
-    // todo check type so that it is a valid integer that is non-negative and non-float
-    // todo check length of Number
-
-    //return true or false
     let pinLength = pin.length
     if (pinLength != 4 && pinLength != 6) {
         return false
