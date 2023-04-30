@@ -2,3 +2,5 @@ P - Parameters
 R - Return 
 E - Examples
 P - Pseudocode
+
+Simulate a whiteboarding session and walk through steps aloud.
