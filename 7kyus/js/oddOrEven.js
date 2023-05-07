@@ -3,8 +3,8 @@
 
 // input can be empty
 
-function oddOrEven() {
-  // code
+function oddOrEven(arr) {
+  return arr.reduce(((acc,curr) => acc + curr),0) % 2  === 0? "even" : 'odd'
 }
 // TODO given array of sum integers
 // TODO check if array has elements --> if not, return even
@@ -15,5 +15,6 @@ function oddOrEven() {
 
 // examples
 console.log(oddOrEven([0])) //even
+console.log(oddOrEven([])) //even
 console.log(oddOrEven([0,1,4])) // odd
 console.log(oddOrEven([-1023, 1, -2])) // even
