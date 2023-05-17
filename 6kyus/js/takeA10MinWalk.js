@@ -1,3 +1,4 @@
+// https://www.codewars.com/kata/54da539698b8a2ad76000228/train/javascript
 // parameter
 //      array of 1 letter strings
 //      never receive an empty array
@@ -18,11 +19,68 @@
 // TODO         create key value pairing object for directions?
 // TODO otherwise false
 
-function isValidWalk(walk) {
-	//
+const directions = {
+	n: 's',
+	s: 'n',
+	w: 'e',
+	e: 'w',
 }
 
-isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) //, 'should return true');
-isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']) //, 'should return false');
-isValidWalk(['w']) //, 'should return false');
-isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) //, 'should return false');
+function isValidWalk(walk) {
+	// review needed
+}
+
+// function isValidWalk(walk) {
+// 	const trackWalk = {}
+// 	let booleanWalk = false
+// 	walk.forEach(block => {
+// 		return trackWalk.hasOwnProperty(block) ? (trackWalk[block] += 1) : (trackWalk[block] = 1)
+// 	})
+// 	//compare whether trackWalk object has equal opposing directions
+// 	for (let dir in trackWalk) {
+// 		if (trackWalk[directions[dir]] === trackWalk[dir]) {
+// 			booleanWalk = true
+// 		}
+// 	}
+// 	return booleanWalk && walk.length === 10
+// }
+
+// Correct
+function isValidWalk1(walk) {
+	var dx = 0
+	var dy = 0
+	var dt = walk.length
+
+	for (var i = 0; i < walk.length; i++) {
+		switch (walk[i]) {
+			case 'n':
+				dy--
+				break
+			case 's':
+				dy++
+				break
+			case 'w':
+				dx--
+				break
+			case 'e':
+				dx++
+				break
+		}
+	}
+
+	return dt === 10 && dx === 0 && dy === 0
+}
+
+function isValidWalk2(walk) {
+	function count(val) {
+		return walk.filter(function (a) {
+			return a == val
+		}).length
+	}
+	return walk.length == 10 && count('n') == count('s') && count('w') == count('e')
+}
+
+// console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'])) //, 'should return true');
+// console.log(isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e'])) //, 'should return false');
+console.log(isValidWalk(['w'])) //, 'should return false');
+console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'])) //, 'should return false');
