@@ -5,13 +5,30 @@
 // return should be a number - it can have 5 in it
 //      it should be the count of all numbers without 5
 
-function dontGiveMeFive(start, end) {
-	//  given start and end numbers
+function dontGiveMeFivebeg(start, end) {
 	// initialize an array of numbers between start and end numbers
+	let initArr = []
+	for (let i = start; i <= end; i++) {
+		initArr.push(i)
+	}
 	// LOOP over array
-	// Need to remove any numbers with a 5 in it
+	const resultArr = initArr.filter((num, ind) => {
+		// Need to remove any numbers with a 5 in it
+		return String(num).split('').indexOf('5')
+	})
 	// map, or filter
 	// .length method to count numbers
+	return resultArr
+}
+
+function dontGiveMeFive(start, end) {
+	let count = 0
+	for (let i = start; i <= end; i++) {
+		if (!String(i).includes('5')) {
+			count++
+		}
+	}
+	return count
 }
 
 console.log(dontGiveMeFive(1, 9), 8)
