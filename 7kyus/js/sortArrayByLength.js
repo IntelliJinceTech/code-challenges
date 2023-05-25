@@ -7,8 +7,9 @@ function sortByLength(arr) {
 	// Todo     Map (?) or sort? - that would return a new array
 	// todo     comparison of .length method of elements within the input array
 	// todo return the new array
-
-	return
+	return arr.sort((a, b) => {
+		return a.length - b.length
+	})
 }
 
 console.log(sortByLength(['Beg', 'Life', 'I', 'To']))
