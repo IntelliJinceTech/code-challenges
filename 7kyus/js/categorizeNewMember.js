@@ -14,6 +14,13 @@ function openOrSenior(data) {
 	// ITERATE over data input
 	// use Senior conditional
 	// return array of strings based on senior/open conditional
+	return data.map(person => {
+		if (person[0] >= 55 && person[1] > 7) {
+			return 'Senior'
+		} else {
+			return 'Open'
+		}
+	})
 }
 
 console.log(
