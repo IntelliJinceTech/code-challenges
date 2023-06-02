@@ -1,7 +1,9 @@
+// practice area
 function insertSort(arr) {
 	let n = arr.length
 }
 
+// answer area
 function insertionSort(inputArr) {
 	let n = inputArr.length
 	for (let i = 1; i < n; i++) {
