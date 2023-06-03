@@ -1,6 +1,11 @@
 // practice area
 function insertSort(arr) {
-	let n = arr.length
+	// determine length of array
+	// Iterate over length of array
+	//  declare variable for element in position in loop
+	//  declare variable for position - 1 in loop
+	//  when (position-1) is greater than -1 AND element at selected position in for loop is less than the element of position-1
+	//
 }
 
 // answer area
