@@ -2,10 +2,13 @@
 function insertSort(arr) {
 	// determine length of array
 	// Iterate over length of array
-	//  declare variable for element in position in loop
-	//  declare variable for position - 1 in loop
-	//  when (position-1) is greater than -1 AND element at selected position in for loop is less than the element of position-1
-	//
+	//      Assign a variable of the current element being considered. represents the element that we want to insert into the sorted portion of the array
+	//      Assign another variable that represents the index of the last element in the sorted portion of the array (j)
+	//      While Loop that continues as long as j hasn't reached beginning of array and the current element being considered is smaller than the element j in sorted portion
+	//          shift element at position j to the right, making space for the 'current' element
+	//          decrement value of j to move onto the previous element in the sorted portion of array
+	//      insert current element into its correct position in the array - just after the last element we compared with in the while loop
+	// return
 }
 
 // answer area
