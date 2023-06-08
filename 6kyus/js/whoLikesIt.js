@@ -14,10 +14,13 @@ function likes(names) {
 			str = 'no one likes this'
 			break
 		case 1:
+			str = `${names[0]} likes this`
 			break
 		case 2:
+			str = `${names[0]} and ${names[1]} like this`
 			break
 		case 3:
+			str = `${names[0]}, ${names[1]} and ${names[2]} like this`
 			break
 		default:
 			str = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
@@ -26,9 +29,9 @@ function likes(names) {
 	return str
 }
 
-// console.log(likes([]), `no one likes this`)
-// console.log(likes(['Peter']), `Peter likes this`)
-// console.log(likes(['Jacob', 'Alex']), `Jacob and Alex likes this`)
-// console.log(likes(['Max', 'John', 'Mark']), `Max, John and Mark likes this`)
+console.log(likes([]), `no one likes this`)
+console.log(likes(['Peter']), `Peter likes this`)
+console.log(likes(['Jacob', 'Alex']), `Jacob and Alex likes this`)
+console.log(likes(['Max', 'John', 'Mark']), `Max, John and Mark likes this`)
 console.log(likes(['Max', 'John', 'Mark', 'Alex']), `    Expected outcome: Max, John and 2 others like this`)
 console.log(likes(['Max', 'John', 'Mark', 'Alex', 'Jacob']), `    Expected outcome: Max, John and 3 others like this`)
