@@ -35,3 +35,5 @@ console.log(likes(['Jacob', 'Alex']), `Jacob and Alex likes this`)
 console.log(likes(['Max', 'John', 'Mark']), `Max, John and Mark likes this`)
 console.log(likes(['Max', 'John', 'Mark', 'Alex']), `    Expected outcome: Max, John and 2 others like this`)
 console.log(likes(['Max', 'John', 'Mark', 'Alex', 'Jacob']), `    Expected outcome: Max, John and 3 others like this`)
+
+// another set of test cases
