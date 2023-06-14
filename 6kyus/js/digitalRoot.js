@@ -28,6 +28,7 @@
 // 	}
 // 	return n
 // }
+
 function digitalRoot(n) {
 	while (String(n).length !== 1) {
 		n = String(n)
