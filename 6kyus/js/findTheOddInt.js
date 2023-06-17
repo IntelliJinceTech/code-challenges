@@ -20,3 +20,4 @@ function findOdd(arr) {
 console.log(findOdd([4, 4, 6]), 6)
 console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]), 4)
 console.log(findOdd([1, 2, 2, 3, 3]), 1)
+console.log(findOdd([1, 2, 2, 3, 3]), 1)
