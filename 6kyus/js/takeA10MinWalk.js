@@ -19,16 +19,16 @@
 // TODO         create key value pairing object for directions?
 // TODO otherwise false
 
-const directions = {
-	n: 's',
-	s: 'n',
-	w: 'e',
-	e: 'w',
-}
+// const directions = {
+// 	n: 's',
+// 	s: 'n',
+// 	w: 'e',
+// 	e: 'w',
+// }
 
-function isValidWalk(walk) {
-	// review needed
-}
+// function isValidWalk(walk) {
+// 	// review needed
+// }
 
 // function isValidWalk(walk) {
 // 	const trackWalk = {}
@@ -46,41 +46,68 @@ function isValidWalk(walk) {
 // }
 
 // Correct
-function isValidWalk1(walk) {
-	var dx = 0
-	var dy = 0
-	var dt = walk.length
+// function isValidWalk1(walk) {
+// 	var dx = 0
+// 	var dy = 0
+// 	var dt = walk.length
 
-	for (var i = 0; i < walk.length; i++) {
-		switch (walk[i]) {
-			case 'n':
-				dy--
-				break
-			case 's':
-				dy++
-				break
-			case 'w':
-				dx--
-				break
-			case 'e':
-				dx++
-				break
-		}
-	}
+// 	for (var i = 0; i < walk.length; i++) {
+// 		switch (walk[i]) {
+// 			case 'n':
+// 				dy--
+// 				break
+// 			case 's':
+// 				dy++
+// 				break
+// 			case 'w':
+// 				dx--
+// 				break
+// 			case 'e':
+// 				dx++
+// 				break
+// 		}
+// 	}
 
-	return dt === 10 && dx === 0 && dy === 0
-}
+// 	return dt === 10 && dx === 0 && dy === 0
+// }
 
-function isValidWalk2(walk) {
-	function count(val) {
-		return walk.filter(function (a) {
-			return a == val
-		}).length
-	}
-	return walk.length == 10 && count('n') == count('s') && count('w') == count('e')
-}
+// function isValidWalk2(walk) {
+// 	function count(val) {
+// 		return walk.filter(function (a) {
+// 			return a == val
+// 		}).length
+// 	}
+// 	return walk.length == 10 && count('n') == count('s') && count('w') == count('e')
+// }
 
 // console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'])) //, 'should return true');
 // console.log(isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e'])) //, 'should return false');
-console.log(isValidWalk(['w'])) //, 'should return false');
-console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'])) //, 'should return false');
+// console.log(isValidWalk(['w'])) //, 'should return false');
+// console.log(isValidWalk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'])) //, 'should return false');
+
+function isValidWalk(walk) {
+	let directionNS = 0
+	let directionEW = 0
+	let count = 0
+	walk.forEach(direction => {
+		switch (direction) {
+			case 'n':
+				count++
+				directionNS++
+				break
+			case 's':
+				count++
+				directionNS--
+				break
+			case 'e':
+				count++
+				directionEW++
+				break
+			case 'w':
+				count++
+				directionEW--
+				break
+		}
+	})
+	return count === 10 && directionNS === 0 && directionEW === 0
+}
