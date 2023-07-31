@@ -10,9 +10,6 @@
 function order(words) {
 	const wordKey = {}
 	words.split(' ').map(ele => {
-		// let num = ele.split('').filter(Number)
-		// wordKey[num] = ele
-
 		wordKey[ele.split('').filter(Number)] = ele
 	})
 	return Object.values(wordKey).join(' ')
