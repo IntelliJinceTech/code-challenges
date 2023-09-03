@@ -14,6 +14,14 @@ function toCamelCase(str) {
 			return word
 		})
 		return returnString.join('')
+	} else if (str.includes('_')) {
+		returnString = str.split('_').map((word, idx) => {
+			if (idx > 0) {
+				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+			}
+			return word
+		})
+		return returnString.join('')
 	}
 	// Split on dash or underscore
 	// loop over each element in array and capitalize first character starting from index 1
