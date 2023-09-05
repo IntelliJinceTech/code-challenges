@@ -5,23 +5,26 @@
 
 function toCamelCase(str) {
 	// Determine if string includes - or underscore
-	let returnString = ''
 	if (str.includes('-')) {
-		returnString = str.split('-').map((word, idx) => {
-			if (idx > 0) {
-				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
-			}
-			return word
-		})
-		return returnString.join('')
+		return str
+			.split('-')
+			.map((word, idx) => {
+				if (idx > 0) {
+					return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+				}
+				return word
+			})
+			.join('')
 	} else if (str.includes('_')) {
-		returnString = str.split('_').map((word, idx) => {
-			if (idx > 0) {
-				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
-			}
-			return word
-		})
-		return returnString.join('')
+		return str
+			.split('_')
+			.map((word, idx) => {
+				if (idx > 0) {
+					return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+				}
+				return word
+			})
+			.join('')
 	}
 }
 
@@ -31,4 +34,5 @@ function toCamelCase(str) {
 // return string
 console.log(toCamelCase('the-stealth-warrior'), 'theStealthWarrior')
 console.log(toCamelCase('The_Templar_warrior'), 'TheTemplarWarrior')
-console.log(toCamelCase('The-Templar-warrior'), 'TheTemplarWarrior')
+console.log(toCamelCase('A_Pippi_isEvil'), 'APippiIsEvil')
+console.log(toCamelCase('a_pippiIsPippi'), 'aPippiIsPippi')
