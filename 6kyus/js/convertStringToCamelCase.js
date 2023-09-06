@@ -5,27 +5,35 @@
 
 function toCamelCase(str) {
 	// Determine if string includes - or underscore
-	if (str.includes('-')) {
-		return str
-			.split('-')
-			.map((word, idx) => {
-				if (idx > 0) {
-					return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
-				}
-				return word
-			})
-			.join('')
-	} else if (str.includes('_')) {
-		return str
-			.split('_')
-			.map((word, idx) => {
-				if (idx > 0) {
-					return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
-				}
-				return word
-			})
-			.join('')
+	// if (str.includes('-')) {
+	// 	return str
+	// 		.split('-')
+	// 		.map((word, idx) => {
+	// 			if (idx > 0) {
+	// 				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+	// 			}
+	// 			return word
+	// 		})
+	// 		.join('')
+	// } else if (str.includes('_')) {
+	// 	return str
+	// 		.split('_')
+	// 		.map((word, idx) => {
+	// 			if (idx > 0) {
+	// 				return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+	// 			}
+	// 			return word
+	// 		})
+	// 		.join('')
+	// }
+
+	const words = str.split('-').join('_').split('_')
+
+	for (let i = 1; i < words.length; i++) {
+		words[i] = words[i][0].toUpperCase() + words[i].slice(1)
 	}
+
+	return words.join('')
 }
 
 // Split on dash or underscore
