@@ -7,14 +7,15 @@
 # 5 = "Buzz"
 
 def fizz_buzz_printer(num):
-    for n in range(num):
+    for n in range(1,num):
         if n % 5 == 0 and n % 3 == 0 and n != 0:
             print("Fizz Buzz")
         elif n % 3 == 0:
             print("Fizz")
         elif n % 5 == 0: 
             print("Buzz")
-        # print(n)
+        else:
+            print(n)
             
 
 print(fizz_buzz_printer(16))
