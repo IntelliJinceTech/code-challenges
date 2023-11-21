@@ -9,20 +9,20 @@
 # [1, 1, 2] ==> 2
 # [17, 17, 3, 17, 17, 17, 17] ==> 3
 
-def stray(arr):
     # create hashmap for occurrences
     # when hashmap value occurence is greater than 1, return the key with value 1
-    # map = {}
-    # for num in arr:
-    #     if num in map:
-    #         map[num] += 1
-    #     else:
-    #         map[num] = 1
-    # return [key for key, value in map.items() if value == 1][0]
-    
+def stray(arr):
+    map = {}
     for num in arr:
-        if arr.count(num) == 1:
-            return num
+        if num in map:
+            map[num] += 1
+        else:
+            map[num] = 1
+    return [key for key, value in map.items() if value == 1][0]
+    
+    # for num in arr:
+    #     if arr.count(num) == 1:
+    #         return num
     
         
 print(stray([1,1,2]), 2)
